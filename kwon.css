@@ -416,3 +416,71 @@ a {
     flex-direction: column;
   }
 }
+
+/* Clearer localized typography for Russian and Georgian pages */
+html[lang="ru"] .kwon-hero h1,
+html[lang="ru"] .kwon-section h2,
+html[lang="ru"] .kwon-card h3 {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 650;
+  letter-spacing: -1.2px;
+}
+html[lang="ru"] .kwon-hero h1 {
+  font-size: clamp(48px, 5.2vw, 86px);
+  line-height: 1.06;
+}
+html[lang="ru"] .kwon-section h2 {
+  font-size: clamp(38px, 4.8vw, 66px);
+  line-height: 1.08;
+}
+html[lang="ru"] .kwon-card h3 {
+  font-size: 25px;
+  line-height: 1.15;
+}
+
+html[lang="ka"] .kwon-hero h1,
+html[lang="ka"] .kwon-section h2,
+html[lang="ka"] .kwon-card h3 {
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 650;
+  letter-spacing: -0.7px;
+  overflow-wrap: anywhere;
+}
+html[lang="ka"] .kwon-hero h1 {
+  font-size: clamp(42px, 4.5vw, 72px);
+  line-height: 1.18;
+  margin-bottom: 28px;
+}
+html[lang="ka"] .kwon-hero-copy > p:not(.eyebrow) {
+  margin-top: 0;
+  line-height: 1.75;
+}
+html[lang="ka"] .kwon-section h2 {
+  font-size: clamp(34px, 4.2vw, 58px);
+  line-height: 1.22;
+  margin-bottom: 24px;
+}
+html[lang="ka"] .kwon-card h3 {
+  font-size: 23px;
+  line-height: 1.25;
+}
+html[lang="ka"] .eyebrow {
+  letter-spacing: 1.1px;
+  line-height: 1.5;
+}
+
+@media (max-width: 560px) {
+  html[lang="ru"] .kwon-hero h1 {
+    font-size: 43px;
+    line-height: 1.1;
+  }
+  html[lang="ka"] .kwon-hero h1 {
+    font-size: 36px;
+    line-height: 1.22;
+    margin-bottom: 24px;
+  }
+  html[lang="ka"] .kwon-section h2 {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+}

@@ -9,3 +9,6 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', 'false');
 }));
 document.querySelector('#year').textContent = new Date().getFullYear();
+const chatbotScript = document.createElement('script');
+chatbotScript.src = 'chatbot.js';
+document.body.appendChild(chatbotScript);

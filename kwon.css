@@ -1,0 +1,418 @@
+:root {
+  --red: #c4161c;
+  --ink: #0b0d0f;
+  --paper: #f4f1eb;
+  --white: #fff;
+  --muted: #6a6d70;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.65;
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  color: inherit;
+}
+.kwon-header {
+  height: 82px;
+  padding: 0 clamp(20px, 5vw, 76px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #090b0d;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid #303236;
+}
+.kwon-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-family: "Barlow Condensed", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+.kwon-brand img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+}
+.kwon-brand small {
+  display: block;
+  color: #aaa;
+  font:
+    10px Inter,
+    Arial,
+    sans-serif;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+.kwon-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.kwon-nav a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+.kwon-nav .active {
+  color: #fff;
+  border-bottom: 2px solid var(--red);
+}
+.kwon-nav .cta {
+  padding: 11px 16px;
+  background: var(--red);
+}
+.kwon-hero {
+  min-height: 720px;
+  background: #090b0d;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
+.kwon-hero-copy {
+  padding: clamp(70px, 9vw, 140px) clamp(25px, 8vw, 120px);
+  align-self: center;
+}
+.eyebrow {
+  margin: 0 0 12px;
+  color: #e36669;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+.kwon-hero h1,
+.kwon-section h2,
+.kwon-card h3 {
+  font-family: "Barlow Condensed", Impact, Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 0.96;
+  margin: 0;
+}
+.kwon-hero h1 {
+  font-size: clamp(62px, 7vw, 112px);
+  letter-spacing: -2px;
+}
+.kwon-hero-copy > p:not(.eyebrow) {
+  max-width: 620px;
+  color: #d2d4d5;
+  font-size: 18px;
+}
+.kwon-hero-visual {
+  position: relative;
+  min-height: 560px;
+}
+.kwon-hero-visual > img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.kwon-hero-visual:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #090b0d 0%, transparent 28%);
+}
+.kwon-caption {
+  position: absolute;
+  z-index: 2;
+  left: 28px;
+  right: 28px;
+  bottom: 25px;
+  padding: 14px 17px;
+  background: #090b0ddd;
+  border-left: 4px solid var(--red);
+  font-size: 12px;
+}
+.kwon-section {
+  padding: clamp(70px, 9vw, 130px) clamp(24px, 8vw, 130px);
+}
+.kwon-intro {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 8vw;
+  align-items: start;
+}
+.kwon-section h2 {
+  font-size: clamp(44px, 6vw, 76px);
+}
+.kwon-lead {
+  font-size: 21px;
+  font-weight: 650;
+  margin-top: 0;
+}
+.kwon-muted {
+  color: var(--muted);
+}
+.kwon-quote {
+  background: #151719;
+  color: #fff;
+  text-align: center;
+}
+.kwon-quote blockquote {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: Georgia, serif;
+  font-size: clamp(24px, 3.2vw, 42px);
+  line-height: 1.35;
+}
+.kwon-quote p {
+  color: #d56265;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+.kwon-timeline {
+  background: #fff;
+}
+.timeline {
+  max-width: 1000px;
+  margin: 55px auto 0;
+  border-left: 3px solid var(--red);
+  padding-left: 32px;
+}
+.timeline article {
+  position: relative;
+  padding: 0 0 38px;
+}
+.timeline article:before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 7px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--red);
+  border: 4px solid #fff;
+}
+.timeline time {
+  font-weight: 800;
+  color: var(--red);
+  letter-spacing: 1px;
+}
+.timeline h3 {
+  margin: 4px 0 7px;
+  font-size: 22px;
+}
+.timeline p {
+  margin: 0;
+  color: var(--muted);
+}
+.kwon-journey {
+  background: #0d0f11;
+  color: #fff;
+}
+.journey-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 50px;
+}
+.journey-grid figure {
+  margin: 0;
+  background: #181b1d;
+  position: relative;
+}
+.journey-grid figure.wide {
+  grid-column: 1/-1;
+}
+.journey-grid img {
+  height: 480px;
+  object-fit: contain;
+  background: #08090a;
+}
+.journey-grid figcaption {
+  padding: 18px 20px;
+  color: #c9cbcc;
+  font-size: 13px;
+}
+.kwon-story {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 7vw;
+  align-items: center;
+}
+.kwon-story img {
+  max-height: 720px;
+  object-fit: contain;
+  background: #111;
+}
+.kwon-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 30px 0;
+}
+.kwon-card {
+  padding: 25px;
+  background: #fff;
+  border-top: 3px solid var(--red);
+}
+.kwon-card h3 {
+  font-size: 29px;
+}
+.kwon-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+.kwon-art {
+  background: #fff;
+}
+.art-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 7vw;
+  align-items: center;
+}
+.art-grid img {
+  max-height: 760px;
+  object-fit: contain;
+  background: #eee;
+}
+.art-note {
+  padding: 18px;
+  border-left: 3px solid var(--red);
+  background: #f0ede7;
+  color: #4b4e51;
+  font-size: 14px;
+}
+.kwon-cta {
+  background: var(--red);
+  color: #fff;
+  text-align: center;
+}
+.kwon-cta h2 {
+  max-width: 850px;
+  margin: auto;
+}
+.kwon-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.kwon-button {
+  display: inline-block;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: 800;
+}
+.kwon-button.light {
+  background: #fff;
+  color: #111;
+}
+.kwon-button.dark {
+  background: #101214;
+  color: #fff;
+}
+.kwon-footer {
+  padding: 26px clamp(24px, 8vw, 130px);
+  background: #08090a;
+  color: #8d9092;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.kwon-sources {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 35px;
+}
+.kwon-sources a {
+  color: var(--red);
+}
+@media (max-width: 900px) {
+  .kwon-header {
+    height: auto;
+    min-height: 74px;
+    align-items: flex-start;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .kwon-nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .kwon-hero,
+  .kwon-intro,
+  .kwon-story,
+  .art-grid {
+    grid-template-columns: 1fr;
+  }
+  .kwon-hero-copy {
+    order: 2;
+  }
+  .kwon-hero-visual {
+    order: 1;
+  }
+  .kwon-hero-visual:after {
+    background: linear-gradient(0deg, #090b0d 0%, transparent 28%);
+  }
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
+  .journey-grid figure.wide {
+    grid-column: auto;
+  }
+  .kwon-facts {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .kwon-brand span {
+    display: none;
+  }
+  .kwon-nav {
+    gap: 11px;
+  }
+  .kwon-nav a {
+    font-size: 11px;
+  }
+  .kwon-nav .cta {
+    padding: 8px 10px;
+  }
+  .kwon-hero h1 {
+    font-size: 54px;
+  }
+  .kwon-hero-visual {
+    min-height: 430px;
+  }
+  .kwon-section {
+    padding: 65px 21px;
+  }
+  .journey-grid img {
+    height: auto;
+    max-height: 530px;
+  }
+  .kwon-footer {
+    flex-direction: column;
+  }
+}

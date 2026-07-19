@@ -12,3 +12,18 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 const chatbotScript = document.createElement('script');
 chatbotScript.src = 'chatbot.js';
 document.body.appendChild(chatbotScript);
+const chatbotScript = document.createElement('script');
+chatbotScript.src = 'chatbot.js';
+document.body.appendChild(chatbotScript);
+
+const kwonPages = {
+  en: ['Grandmaster Kwon', 'grandmaster-kwon.html'],
+  ru: ['Гранд-мастер Квон', 'grandmaster-kwon-ru.html'],
+  ka: ['დიდოსტატი კვონი', 'grandmaster-kwon-ka.html']
+};
+
+const currentLanguage = document.documentElement.lang || 'en';
+const kwonLink = document.createElement('a');
+kwonLink.textContent = kwonPages[currentLanguage][0];
+kwonLink.href = kwonPages[currentLanguage][1];
+document.querySelector('.language-switch').before(kwonLink);

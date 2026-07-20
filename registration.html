@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Online registration for Traditional Taekwon-Do Kutaisi.">
+  <title>Online Registration | Traditional Taekwon-Do Kutaisi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+  <header class="form-header">
+    <a class="brand" href="index.html"><img src="logo.jpg" alt="Traditional Taekwon-Do Kutaisi"><span>Traditional Taekwon-Do<small>Kutaisi · Georgia</small></span></a>
+    <div class="languages" aria-label="Language"><button type="button" data-lang="en">EN</button><button type="button" data-lang="ru">RU</button><button type="button" data-lang="ka">KA</button></div>
+  </header>
+  <main>
+    <section class="form-hero"><p class="eyebrow" data-t="kicker"></p><h1 data-t="title"></h1><p data-t="intro"></p><div class="facts"><span data-t="fee"></span><span data-t="cancel"></span><span data-t="paperless"></span></div></section>
+    <form id="registration-form" action="https://formsubmit.co/taekwondo.kutaisi@gmail.com" method="POST">
+      <input type="hidden" name="_subject" id="subject">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" id="next-page">
+      <input type="hidden" name="_autoresponse" id="autoresponse">
+      <input type="hidden" name="Form language" id="form-language" value="English">
+      <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
+
+      <section class="form-card"><div class="step">01</div><div class="card-content"><h2 data-t="personal"></h2><div class="grid">
+        <label><span data-t="student"></span><input name="Student name" required autocomplete="name"></label>
+        <label><span data-t="birth"></span><input id="birth-date" type="date" name="Date of birth" required></label>
+        <label class="full"><span data-t="address"></span><input name="Address" required autocomplete="street-address"></label>
+        <label><span data-t="phone"></span><input type="tel" name="Phone or WhatsApp" required autocomplete="tel"></label>
+        <label><span data-t="email"></span><input type="email" name="email" required autocomplete="email"></label>
+        <label class="full"><span data-t="guardian"></span><input id="guardian" name="Parent or legal guardian"></label>
+        <label><span data-t="start"></span><input type="date" name="Requested start date" required></label>
+        <label><span data-t="emergency"></span><input type="tel" name="Emergency contact" required></label>
+      </div></div></section>
+
+      <section class="form-card"><div class="step">02</div><div class="card-content"><h2 data-t="membership"></h2><div class="important"><strong data-t="important"></strong><p data-t="absenceWarning"></p></div>
+        <details><summary data-t="termsTitle"></summary><div class="terms" data-html="terms"></div></details>
+        <details><summary data-t="codeTitle"></summary><div class="terms" data-html="code"></div></details>
+      </div></section>
+
+      <section class="form-card"><div class="step">03</div><div class="card-content"><h2 data-t="confirmation"></h2>
+        <div class="checks">
+          <label><input type="checkbox" name="Membership terms accepted" value="Yes" required><span data-t="acceptTerms"></span></label>
+          <label><input type="checkbox" name="Code of conduct accepted" value="Yes" required><span data-t="acceptCode"></span></label>
+          <label><input type="checkbox" name="Absence rule acknowledged" value="Yes" required><span data-t="acceptAbsence"></span></label>
+          <label><input type="checkbox" name="Data processing consent" value="Yes" required><span data-t="acceptPrivacy"></span></label>
+        </div>
+        <label class="signature"><span data-t="signature"></span><input name="Binding confirmation name" required autocomplete="name"><small data-t="signatureHint"></small></label>
+        <p class="privacy-note" data-t="privacyNote"></p>
+        <button class="submit" type="submit" data-t="submit"></button>
+      </div></section>
+    </form>
+  </main>
+  <footer><span>© <span id="year"></span> Traditional Taekwon-Do Kutaisi</span><a href="index.html" data-t="back"></a></footer>
+  <script src="registration.js"></script>
+</body>
+</html>
